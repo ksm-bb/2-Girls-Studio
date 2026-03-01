@@ -4,9 +4,9 @@
   <base target="_top">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
   
-  <link rel="apple-touch-icon" href="https://i.ibb.co/1Cf8JTS/S-4620317.jpg">
-  <link rel="icon" sizes="192x192" href="https://i.ibb.co/1Cf8JTS/S-4620317.jpg">
-  <link rel="shortcut icon" href="https://i.ibb.co/1Cf8JTS/S-4620317.jpg">
+  <link rel="apple-touch-icon" href="https://i.ibb.co/3m81p1gM/images.jpg">
+  <link rel="icon" sizes="192x192" href="https://i.ibb.co/3m81p1gM/images.jpg">
+  <link rel="shortcut icon" href="https://i.ibb.co/3m81p1gM/images.jpg">
   
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -99,7 +99,13 @@
             <div className="flex items-center gap-1">
               <h1 className="text-2xl font-black italic tracking-tighter flex">
                 {"Girls Studio".split('').map((char, index) => (
-                  <span key={index} className="bg-gradient-to-br from-[#9673D2] to-[#CCAAE6] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave" style={{ animationDelay: `${index * 0.1}s` }}>{char}</span>
+                  <span
+                    key={index}
+                    className={`bg-gradient-to-br from-[#9673D2] to-[#CCAAE6] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave pb-2 ${char === ' ' ? 'w-2.5' : 'pr-[1.5px]'}`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {char}
+                  </span>
                 ))}
               </h1>
               <button onClick={() => isAdmin ? setIsAdmin(false) : setShowAuthModal(true)} className={`px-1.5 py-0.5 ml-1 rounded-full text-[7px] font-black uppercase tracking-widest border shadow-sm transition-all active:scale-95 ${isAdmin ? 'bg-white/60 text-[#9673D2] border-[#CCAAE6]' : 'bg-gray-100/80 text-gray-400 border-gray-200'}`}>
@@ -892,3 +898,4 @@
   </script>
 </body>
 </html>
+
